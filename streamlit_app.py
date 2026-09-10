@@ -208,5 +208,9 @@ try:
 
     except Exception as e:
         st.error(f"⚠️ No se pudo generar el gráfico seleccionado. Asegúrate de elegir una columna numérica para el eje Y (como 'Ocupados'). Detalle: {e}")
+        
+except Exception as e:
+     st.error(f"❌ Error al cargar los datos: {str(e)}")
+     st.error("Por favor,verifica que los archivos existan en la carpeta ´data` y tengan el formato correcto.")
 
 
